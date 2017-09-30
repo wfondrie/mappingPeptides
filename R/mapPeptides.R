@@ -10,7 +10,11 @@ mapPeptides <- function(seq, antigen = NULL, minLength = 1){
     
     if(mc < 0) mc <- 0
     
-    if(is.null(antigen)) antigen <- "."
+    if(is.null(antigen)) {
+        antigen <- "." 
+    } else {
+        antigen <- toupper(antigen)
+    }
     
     dat <- tibble(peptide = unlist(cleave(seq, custom = ".", missedCleavages = mc:nchar(seq))))
     
