@@ -18,4 +18,4 @@ ZmaK <- mapPeptides(prot[3], antigen = substring(prot[3], nchar(prot[3])-20), mi
 write_csv(ZmaK, "results/ZmaK.csv")
 
 PKS_NRPS_Cysteine <- mapPeptides(prot[4], antigen = substring(prot[4], nchar(prot[4])-20), minLength = 100)
-write_csv(PKS_NRPS_Cysteine, "results/PKS_NRPS_Cysteine")
+write_csv(PKS_NRPS_Cysteine, "results/PKS_NRPS_Cysteine.csv")
