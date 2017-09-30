@@ -18,7 +18,9 @@ mapPeptides <- function(fasta, antigen = NULL, minLength = 1, sub = NULL){
         mutate(mass = MolecularWeight(ConvertPeptide(pep)))
 }
 
-prot <- toupper(unlist(read.fasta("data/triple_KS_Sequenc.fasta", as.string = T)))
+
+prot <- toupper(unlist(read.fasta("data/triple_KS_Sequence.fasta", as.string = T)))
+prot <- substring(prot, 1763)
 
 prot <- toupper("aklhind")
 
